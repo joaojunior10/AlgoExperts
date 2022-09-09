@@ -8,7 +8,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-class ProgramTest {
+public class RiverSizesTest {
     @Test
     public void TestCase1() {
         int[][] input = {
@@ -22,17 +22,5 @@ class ProgramTest {
         List<Integer> output = RiverSizes.riverSizes(input);
         System.out.println(output);
         assertArrayEquals(output.stream().mapToInt(Integer::intValue).toArray(), expected);
-    }
-
-    public static boolean compare(List<Integer> arr1, int[] arr2) {
-        if (arr1.size() != arr2.length) {
-            return false;
-        }
-        for (int i = 0; i < arr1.size(); i++) {
-            if (arr1.get(i) != arr2[i]) {
-                return false;
-            }
-        }
-        return true;
     }
 }
